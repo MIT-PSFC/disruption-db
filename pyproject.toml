@@ -1,0 +1,27 @@
+[dependency-groups]
+dev = [
+  "black>=25.1.0",
+  "isort>=6.0.0",
+  "mypy>=1.15.0",
+  "pylint>=3.3.0",
+  "ruff>=0.11.0",
+  "shellcheck-py>=0.10.0",
+  "tomllint>=0.3.0",
+  "yamllint>=1.36.0"
+]
+
+[project]
+name = "disruption-db"
+version = "0.1.0"
+description = "large-scale disruption workflow for Alcator C-Mod, DIII-D, and MAST"
+authors = [
+  { name = "Gregorio L. Trevisan", email = "gtrevisan@psfc.mit.edu" }
+]
+readme = "README.md"
+requires-python = "==3.13.*"
+dependencies = [
+  "disruption-py"
+]
+
+[tool.uv.sources]
+disruption-py = { git = "https://github.com/MIT-PSFC/disruption-py/", branch = "dev" }
